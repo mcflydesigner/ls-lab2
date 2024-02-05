@@ -1,0 +1,5 @@
+docker_image: "mcflydesigner/ls-lab2"
+docker_image_tag: "latest"
+
+docker_app_outer_port: 80
+docker_app_inner_port: 8080

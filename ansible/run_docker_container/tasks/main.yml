@@ -1,0 +1,13 @@
+- name: Stop the running Docker container
+  shell: >
+    docker stop app
+  ignore_errors: yes
+
+- name: Remove the Docker container
+  shell: >
+    docker rm app
+  ignore_errors: yes
+
+- name: Run Docker container
+  shell: >
+    docker run -p {{docker_app_outer_port}}:{{docker_app_inner_port}} -d --name app {{docker_image}}:{{docker_image_tag}}
